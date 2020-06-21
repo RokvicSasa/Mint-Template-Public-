@@ -1,0 +1,123 @@
+@import '../../style/App.scss';
+
+// DESKTOP NAVBAR
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $white-color;  
+  width: 100%;
+  padding: 9px 0;
+  transition:  0.3s ease;
+  z-index: 100;
+
+  .mobile__menu {
+    display: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  .desktop__menu {
+    display: block;
+
+    ul {
+      li {
+        cursor: pointer;
+        padding: 2rem 2.7rem;
+        margin: 0 1rem;
+      }
+      li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+      }
+      li:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
+.extraLargeNavbar {
+  padding: 29px 0;
+}
+
+// MOBILE NAVBAR
+.mobile__navbar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: $black-color;
+  z-index: 1000;
+  width: 50%;
+  transition:  0.4s ease;
+  padding: 20px;
+  overflow-y: auto;
+  
+  .mobile__navbar-close {
+    padding: 20px;
+    margin-right: 80%;
+    cursor: pointer;
+    
+    img {
+      min-width: 30px;
+      height: auto;
+    }
+  }
+  .mobile__navbar-logo {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .mobile__navbar-menu {
+    padding-top: 20%;
+    ul {
+      li {
+        cursor: pointer;
+        color: $white-color;
+        font-size: 2.5rem;
+        padding: 5% 0;
+      }
+      li:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
+.mobile__open {
+  right: 0;
+}
+
+// BACKDROP
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: $black-color;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  display: none;
+}
+.backdrop__open {
+  display: block;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 720px) {
+  .Navbar {
+    .mobile__menu {
+      display: block;
+    }
+    .desktop__menu {
+      display: none;
+    }
+  }
+  .mobile__navbar {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .mobile__navbar {
+    width: 100%;
+  }
+}

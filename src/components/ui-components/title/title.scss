@@ -1,0 +1,17 @@
+@import '../../../style/App.scss';
+
+@media screen and (max-width: 990px) {
+  .big__title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .big__title {
+    h2 {
+      font-size: 4rem;
+    }
+  }
+}

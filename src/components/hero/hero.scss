@@ -1,0 +1,45 @@
+@import '../../style/App.scss';
+
+.hero {
+  padding-top: 240px;
+  width: 100%;
+  padding-bottom: 60px;
+  .hero-info {
+    padding-top: 60px;
+
+    p {
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .hero-image {
+    max-width: 570px;
+    height: auto;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .hero {
+    padding-top: 140px;
+
+    .hero-info {
+      padding-top: 0px;
+    }
+
+    .hero-image {
+      float: none;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .hero {
+    .hero-info {
+      text-align: center;
+    }
+  }
+}

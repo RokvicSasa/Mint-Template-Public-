@@ -1,0 +1,47 @@
+@import '../../style/App.scss';
+
+.blog__box {
+  background-color: $white-color;
+  width: 100%;
+  max-width: 370px;
+  min-height: 460px;
+  position: relative;
+  margin: 30px auto;
+
+  .blog__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog__hover {
+      cursor: pointer;
+      transition: 0.3s ease;
+      background-color: rgba($main-color, 0.8);
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .blog__image:hover {
+    .blog__hover {
+      opacity: 1;
+    }
+  }
+
+  .blog__info {
+    padding: 35px;
+
+    h4 {
+      text-transform: uppercase;
+    }
+  }
+}
+
